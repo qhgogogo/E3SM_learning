@@ -7,7 +7,7 @@
 	export MainDir=/usr/bin
 1. gcc:
 
-	sudo yum group install "Development Tools"
+	sudo yum group install "Development Tools"  # if it is Ubuntu this line is not needed
 	
 	 sudo wget https://ftp.gnu.org/gnu/gcc/gcc-8.3.0/gcc-8.3.0.tar.gz
 	 
@@ -15,10 +15,18 @@
 	 
 	 ./contrib/download_prerequisites
 	 
+	 sudo apt-get update   
+	 
+         sudo apt install build-essential # basic C compiler to build gcc
+	 
 	 sudo ./configure --enable-languages=c,c++,fortran --disable-multilib
 	 
 	 sudo make
+	 ## if bugs met, use patch
 	 
+	 
+	 
+	 ###
 	 sudo make install
 	 
 	 scl enable devtoolset-6 bash
