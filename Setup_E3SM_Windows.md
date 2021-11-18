@@ -11,6 +11,8 @@
 	
 	 sudo wget https://ftp.gnu.org/gnu/gcc/gcc-8.3.0/gcc-8.3.0.tar.gz
 	 
+	 put nameserver 8.8.8.8 to the first line of /etc/resolv.conf if wget can't work. 
+	 
 	 sudo tar -zxvf gcc-8.3.0.tar.gz
 	 
 	 ./contrib/download_prerequisites
@@ -22,11 +24,9 @@
 	 sudo ./configure --enable-languages=c,c++,fortran --disable-multilib
 	 
 	 sudo make
-	 ## if bugs met, use patch
 	 
-	 
-	 
-	 ###
+	 if bugs met, use patch:GCCcore-9.2.0-fix-glibc-2.31-libsanitizer.patch
+	
 	 sudo make install
 	 
 	 scl enable devtoolset-6 bash
