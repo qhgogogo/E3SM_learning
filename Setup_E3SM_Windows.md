@@ -11,7 +11,7 @@
 	
 	 sudo wget https://ftp.gnu.org/gnu/gcc/gcc-8.3.0/gcc-8.3.0.tar.gz
 	 
-	 put nameserver 8.8.8.8 to the first line of /etc/resolv.conf if wget can't work. 
+	 put nameserver 8.8.8.8 to the first line of /etc/resolv.conf if wget can't work. sudo chmod 777 /etc/resolv.conf
 	 
 	 sudo tar -zxvf gcc-8.3.0.tar.gz
 	 
