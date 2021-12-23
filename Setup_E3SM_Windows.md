@@ -26,7 +26,9 @@
 	 scl enable devtoolset-8 bash
 2. cmake:
 		wget https://cmake.org/files/v3.12/cmake-3.12.3.tar.gz
+		
 		tar zxvf cmake-3.*
+		
 		cd cmake-3.*
 
 		./bootstrap --prefix=/home/dalei/cmake
