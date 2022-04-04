@@ -2,4 +2,4 @@ Primary data structure: https://escomp.github.io/ctsm-docs/versions/release-clm5
 Soil vertical structure: initVerticalMod.f90; SoilStateType.f90 has some types.
 SoilHydrologyType.F90: line315-line316:, define zwt:  this%wa_col(c)  = 4800._r8
                    this%zwt_col(c) = (25._r8 + col_pp%zi(c,nlevsoi)) - this%wa_col(c)/0.2_r8 /1000._r8  ! One meter below soil column
-ColumnDataType.f90 SoilStateType.f90: hist_addfld2d for adding variables in column or soil
+ColumnDataType.f90 SoilStateType.f90: hist_addfld2d for adding variables in column or soil. ColumnDataType.f90 has initial soil water content definition
