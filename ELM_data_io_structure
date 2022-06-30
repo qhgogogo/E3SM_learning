@@ -1,3 +1,10 @@
+git clone https://github.com/E3SM-Project/E3SM.git e3sm_src
+cd e3sm_src
+git fetch origin
+git checkout origin/master
+git submodule update --init --recursive
+git clone -b hanqiu/lnd/lateral_flow_mDarcy --recursive https://github.com/E3SM-Project/E3SM.git E3SM_hq
+
 Primary data structure: https://escomp.github.io/ctsm-docs/versions/release-clm5.0/html/tech_note/Ecosystem/CLM50_Tech_Note_Ecosystem.html
 Soil vertical structure: initVerticalMod.f90; SoilStateType.f90 has some types.
 SoilHydrologyType.F90: line315-line316:, define zwt:  this%wa_col(c)  = 4800._r8
