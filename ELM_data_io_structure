@@ -1,4 +1,5 @@
 git push git@github.com:qhgogogo/E3SM.git hanqiu/lnd/lateral_flow
+git push git@github.com:qhgogogo/E3SM hanqiu/lnd/hanqiu_lateral_flow_parallel
 git clone -b hanqiu/lnd/lateral_flow git@github.com:qhgogogo/E3SM.git E3SM_washita_gittest
 
 git clone https://github.com/E3SM-Project/E3SM.git e3sm_src
