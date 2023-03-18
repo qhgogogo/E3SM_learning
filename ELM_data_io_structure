@@ -4,6 +4,9 @@ bld/namelist_files/namelist_defaults.xml
 main/elm_varctl.F90
 main/controlMod.F90
 
+git add **** % **** is the file to be committed
+git commit -a
+git commit -m 'name whatever the tag'
 git push git@github.com:qhgogogo/E3SM.git hanqiu/lnd/lateral_flow
 git push git@github.com:qhgogogo/E3SM hanqiu/lnd/hanqiu_lateral_flow_parallel
 git clone -b hanqiu/lnd/lateral_flow git@github.com:qhgogogo/E3SM.git E3SM_washita_gittest
