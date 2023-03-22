@@ -26,3 +26,50 @@ SoilHydrologyMod.F90 SoilStateType.F90 has initial settings of sucsat etc.
 elm_varpar.f90 change soil layers (nlevsoilfl)
 
 env  |grep NETCDF
+
+%% the following is for adding a new namelist
+bld/namelist_files/namelist_definition.xml
+bld/namelist_files/namelist_defaults.xml
+main/elm_varctl.F90
+main/controlMod.F90
+use_subsurface_lateral_flow = <.true.|.false.>  in user_nl_elm
+in HydrologyNoDrainageMod.F90:
+      !------------------------------------------------------------------------------------
+      if (use_pflotran .and. pf_hmode) then
+
+        call WaterTable(bounds, num_hydrononsoic, filter_hydrononsoic, &
+           num_urbanc, filter_urbanc, &
+           soilhydrology_vars, soilstate_vars, dtime)
+
+      else
+      !------------------------------------------------------------------------------------
+
+        !call WaterTable(bounds, num_hydrologyc, filter_hydrologyc, num_urbanc, filter_urbanc, &
+        !   soilhydrology_vars, soilstate_vars, dtime)
+        !call ThetaBasedWaterTable(bounds, num_hydrologyc, filter_hydrologyc, num_urbanc, filter_urbanc, &
+        !    soilhydrology_vars, soilstate_vars, dtime)
+
+
+      !------------------------------------------------------------------------------------
+      end if 
+will change to
+      !------------------------------------------------------------------------------------
+      if (use_pflotran .and. pf_hmode) then
+
+        call WaterTable(bounds, num_hydrononsoic, filter_hydrononsoic, &
+           num_urbanc, filter_urbanc, &
+           soilhydrology_vars, soilstate_vars, dtime)
+
+      else
+      !------------------------------------------------------------------------------------
+        if (.not. use_subsurface_lateral_flow) then
+           call WaterTable(bounds, num_hydrologyc, filter_hydrologyc, num_urbanc, filter_urbanc, &
+               soilhydrology_vars, soilstate_vars, dtime)
+
+           ! This should be removed from the code
+           !!!call ThetaBasedWaterTable(bounds, num_hydrologyc, filter_hydrologyc, num_urbanc, filter_urbanc, &
+           !!!    soilhydrology_vars, soilstate_vars, dtime)
+        endif
+
+      !------------------------------------------------------------------------------------
+      end if 
