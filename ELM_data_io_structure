@@ -1,3 +1,7 @@
+remove a variable in a .nc file
+module load nco
+ncks -C -O -x -v zhill,fhill,hslp,tslp surfdata_coloradoupper_c230322_new-cp.nc        surfdata_coloradoupper_c230322_new-cp_delete.nc
+
 add a definition tag:
 bld/namelist_files/namelist_definition.xml
 bld/namelist_files/namelist_defaults.xml
