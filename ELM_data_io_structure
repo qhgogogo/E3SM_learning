@@ -1,4 +1,10 @@
-remove a variable in a .nc file
+%% surface subsurface runoff
+fdrain  % to modify subsurface runoff
+fff     % to modify surface runoff
+
+
+
+%%remove a variable in a .nc file
 module load nco
 ncks -C -O -x -v zhill,fhill,hslp,tslp surfdata_coloradoupper_c230322_new-cp.nc        surfdata_coloradoupper_c230322_new-cp_delete.nc
 
