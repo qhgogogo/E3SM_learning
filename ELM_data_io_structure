@@ -1,7 +1,10 @@
 %% surface subsurface runoff
+SoilHydrologyType.F90:
 fdrain  % to modify subsurface runoff
 fff     % to modify surface runoff
+SoilHydrologyMod.F90
 
+variables: QDRAI (subsurface runoff), QOVER (surface runof), QRUNOFF (total runoff)
 
 
 %%remove a variable in a .nc file
