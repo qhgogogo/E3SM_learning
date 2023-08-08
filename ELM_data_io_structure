@@ -6,6 +6,7 @@ SoilHydrologyMod.F90
 
 variables: QDRAI (subsurface runoff), QOVER (surface runof), QRUNOFF (total runoff)
 
+%% lateral run need to take care variables in surface data
 However, if URBAN_REGION_ID is not zero (irrespective of the PCT_URBAN value), three urban columns per grid cells are created.
 So, for the 10x10 surface datasets there were 400 columns (=100 nat veg + 300 urban) because URBAN_REGION_ID was non-zero.
 
