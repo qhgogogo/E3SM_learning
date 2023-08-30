@@ -36,6 +36,9 @@ git fetch origin
 git checkout origin/master
 git submodule update --init --recursive
 
+git checkout -b xxx   % create a new branch from current local branch name xxx
+git push -u git@github.com:qhgogogo/E3SM.git % push xxx to my E3SM repo
+
 Primary data structure: https://escomp.github.io/ctsm-docs/versions/release-clm5.0/html/tech_note/Ecosystem/CLM50_Tech_Note_Ecosystem.html
 Soil vertical structure: initVerticalMod.f90; SoilStateType.f90 has some types.
 SoilHydrologyType.F90: this%wa_col(c)  = 4000._r8
