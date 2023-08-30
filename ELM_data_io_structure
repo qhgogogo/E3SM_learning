@@ -1,3 +1,5 @@
+ssh-keygen -R github.com
+
 %% surface subsurface runoff
 SoilHydrologyType.F90:
 fdrain  % to modify subsurface runoff
