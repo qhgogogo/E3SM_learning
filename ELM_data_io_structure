@@ -1,3 +1,21 @@
+%% locate cell grid
+diff --git a/components/elm/src/main/initGridCellsMod.F90 b/components/elm/src/main/initGridCellsMod.F90
+index 2153ed42b0..bbc127583f 100644
+--- a/components/elm/src/main/initGridCellsMod.F90
++++ b/components/elm/src/main/initGridCellsMod.F90
+@@ -222,6 +222,10 @@ contains
+           grc_pp%lat(gdc)    = grc_pp%latdeg(gdc) * SHR_CONST_PI/180._r8
+           grc_pp%lon(gdc)    = grc_pp%londeg(gdc) * SHR_CONST_PI/180._r8
+
++          if (grc_pp%latdeg(gdc) == X .and. grc_pp%londeg(gdc) == Y) then
++             write(*,*)'rank ',iam,' owns lat = X and lon = Y','and the g-index is ',gdc
++          endif
++
+           grc_pp%stdev_elev(gdc)     = ldomain%stdev_elev(gdc)
+           grc_pp%sky_view(gdc)       = ldomain%sky_view(gdc)
+           grc_pp%terrain_config(gdc) = ldomain%terrain_config(gdc)
+
+
 ssh-keygen -R github.com
 
 %% surface subsurface runoff
