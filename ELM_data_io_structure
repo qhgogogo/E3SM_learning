@@ -19,6 +19,11 @@ index 2153ed42b0..bbc127583f 100644
 ssh-keygen -R github.com
 
 %% surface subsurface runoff
+'QOVER',      --> surface runoff
+'QDRAI',       --> subsurface runoff
+'QH2OSFC', --> surface water runoff
+'QRUNOFF' --> total runoff
+QOVER is the surface runoff from the saturated surface, while QH2OSFC is the surface runoff from wetlands/ponding water.
 SoilHydrologyType.F90:
 fdrain  % to modify subsurface runoff
 fff     % to modify surface runoff
