@@ -59,6 +59,10 @@ git fetch origin
 git checkout origin/master  or git pull origin yourbranch %to get the lastest commit from yourbranch 
 git submodule update --init --recursive
 
+git remote -v  % check remote origin
+git init    % not sure needed
+git add .
+git commit -m 'hanqiu_new'
 git checkout -b xxx   % create a new branch from current local branch name xxx
 git push -u git@github.com:qhgogogo/E3SM.git xxx  % push xxx to my E3SM repo
 
